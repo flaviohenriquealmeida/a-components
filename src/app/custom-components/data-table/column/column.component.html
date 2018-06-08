@@ -1,0 +1,10 @@
+<span [ngSwitch]="type">
+    <span *ngSwitchCase="'date'">
+        {{ data | date: 'MM/dd/yyyy'}}
+    </span>
+    <div *ngSwitchCase="'boolean'">
+        <span *ngIf="data; else falseTmpl">{{ showTrueAs }}</span>
+        <ng-template #falseTmpl>{{ showFalseAs }}</ng-template>
+    </div>
+    <span *ngSwitchDefault>{{ data }}</span>
+</span>

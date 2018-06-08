@@ -1,0 +1,27 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .rows-rer-page-label {
+        margin-right: 1em;
+    }
+
+    .pagination-footer {
+        display: flex;
+        width: 30%;
+        align-items: center;
+        justify-content: space-around;
+
+        .prev-controller {
+            margin-right: 8px;
+        }
+        
+        .prev-controller, .next-controller {
+            padding: 0.5em;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    
+    }
+}

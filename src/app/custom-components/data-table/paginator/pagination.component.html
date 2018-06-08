@@ -1,0 +1,14 @@
+<div class="pagination">
+    <label class="rows-per-page-label" for="rowsPerPage">Rows per page</label>
+    <select id="rowsPerPage" (change)="chageRowsPerPage($event)">
+        <option *ngFor="let numberOfRows of numberOfRowsOption">
+            {{ numberOfRows }}
+        </option>
+    </select>
+    <div class="pagination-footer">
+        <p>{{ getCurrentPage() }}-{{ getNumberOfPages() }} of {{ getRowCount() }}</p>
+        <div>
+            <span class="prev-controller" (click)="previowsPage()"><</span><span class="next-controller" (click)="nextPage()">></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.table {
+    font-size: 12px;
+    padding: 1em;
+    background: white;
+    width: 100%;
+}
+
+.horizontal-scroll {
+    overflow-x:auto;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.row {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.row:nth-child(2n) {
+    background: #f5f7fa;
+}
+
+.row:hover {
+    background: darken(#f5f7fa, 5%);
+}
+
+.column {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1em;
+    text-align: left;
+    padding: 1em 2em;
+    margin-right: 1em;
+}
+
+.heading {
+    font-size: 1em;
+    background: #f8f9fa;
+}
+
