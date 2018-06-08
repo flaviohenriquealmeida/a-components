@@ -3,9 +3,9 @@ import { Observable } from "rxjs";
 import { tap } from 'rxjs/operators';
 
 import { AbstractDataModel } from "./abstract-data-model";
-import { fade } from "../../animations/animations";
 import { CheckboxComponent } from "../checkbox/checkbox.component";
 import { PaginationComponent } from "./paginator/pagination.component";
+import { fade } from "../animations/animations";
 
 @Component({
     selector: 'mco-data-table',
