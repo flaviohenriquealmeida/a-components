@@ -1,0 +1,66 @@
+<form [formGroup]="form" (ngSubmit)="show()">
+    <div>
+        <label>Name</label>
+        <input formControlName="name">
+        <small 
+            *ngIf="form.get('name').errors?.required" 
+            class="text-danger d-block mt-2">
+            Name is required!
+        </small>
+    </div>
+
+    <div>
+        <label>First time</label>
+        <input type="checkbox" formControlName="firstTime">    
+        <small 
+            *ngIf="form.get('firstTime').errors?.required"
+            class="text-danger d-block mt-2">
+            First time is required!
+        </small>        
+
+    </div>
+
+    <div>
+        <label>Situation</label>
+        <select formControlName="state">
+            <option [ngValue]="null" disabled>Choose</option>
+            <option *ngFor="let option of options" [ngValue]="option">
+                {{ option.name }}
+            </option>
+        </select>
+        <small 
+            *ngIf="form.get('state').errors?.required" 
+            class="text-danger d-block mt-2">
+            State is required!
+        </small>        
+    </div>  
+
+    <div>
+        <label>Favourite color</label>
+        <input type="radio" name="color" value="red" formControlName="color">
+        <input type="radio" name="color" value="blue" formControlName="color">        
+        <small 
+            *ngIf="form.get('color').errors?.required" 
+            class="text-danger d-block mt-2">
+            Color is required!
+        </small>          
+    </div>  
+
+    <div>
+        <select multiple formControlName="selectedTechnologies">
+            <option *ngFor="let technology of technologies" [ngValue]="technology">
+                {{ technology.techName }}
+            </option>
+        </select>
+        <small 
+            *ngIf="form.get('selectedTechnologies').errors?.required" 
+            class="text-danger d-block mt-2">
+            Select at leat one technology is required!
+        </small>               
+    </div>  
+
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+    <div>
+        {{ form.getRawValue() | json }}
+    </div>
+</form>
