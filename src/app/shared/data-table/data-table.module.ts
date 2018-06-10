@@ -6,6 +6,7 @@ import { PaginationComponent } from "./paginator/pagination.component";
 import { ColumnHeaderComponent } from "./column-header/column-header.component";
 import { ColumnComponent } from "./column/column.component";
 import { CheckboxComponent } from "../checkbox/checkbox.component";
+import { CheckboxModule } from "../checkbox/checkbox.module";
 
 @NgModule({
     declarations: [ 
@@ -19,7 +20,7 @@ import { CheckboxComponent } from "../checkbox/checkbox.component";
     ],
     imports: [ 
         CommonModule,
-        CheckboxComponent,
+        CheckboxModule,
         HttpClientModule
     ]
 })

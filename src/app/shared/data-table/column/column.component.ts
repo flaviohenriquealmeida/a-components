@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-    selector: 'mco-column',
+    selector: 'my-column',
     templateUrl: './column.component.html'
 })
 export class ColumnComponent implements OnInit {

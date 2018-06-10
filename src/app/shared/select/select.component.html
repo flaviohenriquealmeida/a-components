@@ -1,0 +1,6 @@
+<select>
+    <option [ngValue]="null" disabled>{{ label }}</option>
+    <option *ngFor="let option of options" [ngValue]="option">
+        {{ option[propertyLabel] }}
+    </option>
+</select>

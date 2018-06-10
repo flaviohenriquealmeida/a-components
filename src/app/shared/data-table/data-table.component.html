@@ -4,35 +4,35 @@
         <thead class="table-header">
             <tr class="row">
                 <th class="column heading">
-                        <mco-checkbox 
+                        <my-checkbox 
                         (onChange)="toogleAll($event)">
-                        </mco-checkbox>
+                        </my-checkbox>
                 </th>
                 <th class="column heading" *ngFor="let field of fields">
-                    <mco-column-header [field]="field">
-                    </mco-column-header>
+                    <my-column-header [field]="field">
+                    </my-column-header>
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="row" *ngFor="let item of dataList$ | async">
                 <td class="column">
-                    <mco-checkbox 
+                    <my-checkbox 
                         (onChange)="select(item, $event)">
-                    </mco-checkbox>
+                    </my-checkbox>
                 </td>
                 <td @fade *ngFor="let field of fields">
-                    <mco-column
+                    <my-column
                         [data]="item[field]"
                         [showTrueAs]="showTrueAs"
                         [showFalseAs]="showFalseAs">
-                    </mco-column>
+                    </my-column>
                 </td>
             </tr>
         </tbody>
         <tfoot>
             <td [colSpan]="fields.length">
-                <mco-pagination (onInteration)="loadData()"></mco-pagination>
+                <my-pagination (onInteration)="loadData()"></my-pagination>
             </td>
         </tfoot>
     </table>

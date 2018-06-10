@@ -1,7 +1,7 @@
 import { Component, Input, Output, OnChanges, SimpleChanges, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'mco-column-header',
+    selector: 'my-column-header',
     templateUrl: './column-header.component.html'
 })
 export class ColumnHeaderComponent implements OnInit {
